@@ -11,6 +11,7 @@ Source:		%{name}-%{version}.tar.bz2
 URL:		http://cimi.netsons.org/pages/murrine.php
 License:	GPL
 Group:		Graphical desktop/GNOME
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gtk2-devel
 
 %description
