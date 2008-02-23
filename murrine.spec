@@ -1,40 +1,54 @@
 %define name	murrine
 %define version	0.53.1
-%define release %mkrel 1
+%define release %mkrel 2
+%define libname %{_lib}%{name}
 
 Name: 	 	%{name}
 Summary: 	Murrine GTK2 cairo theme
 Version: 	%{version}
 Release: 	%{release}
 
-Source:		%{name}-%{version}.tar.bz2
-URL:		http://cimi.netsons.org/pages/murrine.php
-License:	GPL
+Source:		http://www.cimitan.com/murrine/files/%{name}-%{version}.tar.bz2
+URL:		http://www.cimitan.com/murrine/
+License:	GPLv2
 Group:		Graphical desktop/GNOME
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gtk2-devel
+Requires:	%{libname}
 
 %description
 The Murrine engine is a cairo-based GTK2 theming tool.  It's very fast compared
 to clearlooks-cairo.  Murrine includes animations and a unique style.
 
+%package -n %{libname}
+Summary:	Murrine GTK2 cairo theme
+Group:		Graphical desktop/GNOME
+Conflicts:	murrine < 0.53.1-2
+
+%description -n %{libname}
+The Murrine engine is a cairo-based GTK2 theming tool.  It's very fast compared
+to clearlooks-cairo.  Murrine includes animations and a unique style.
+This package contains the Murrine GTK+ engine itself.
+
 %prep
 %setup -q
 
 %build
-%configure2_5x --enable-animation
+%configure --enable-animation
 %make
 										
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS COPYING CREDITS ChangeLog NEWS README
+%doc AUTHORS CREDITS ChangeLog
+
+%files -n %{libname}
 %{_libdir}/gtk-2.0/*/engines/libmurrine.so
 %{_libdir}/gtk-2.0/*/engines/libmurrine.la
 
