@@ -1,6 +1,6 @@
 %define name	murrine
 %define version	0.53.1
-%define release %mkrel 2
+%define release %mkrel 3
 %define libname %{_lib}%{name}
 
 Name: 	 	%{name}
@@ -22,7 +22,7 @@ to clearlooks-cairo.  Murrine includes animations and a unique style.
 
 %package -n %{libname}
 Summary:	Murrine GTK2 cairo theme
-Group:		Graphical desktop/GNOME
+Group:		System/Libraries
 Conflicts:	murrine < 0.53.1-2
 
 %description -n %{libname}
