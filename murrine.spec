@@ -1,6 +1,6 @@
 %define name	murrine
 %define version	0.53.1
-%define release %mkrel 3
+%define release %mkrel 5
 %define libname %{_lib}%{name}
 
 Name: 	 	%{name}
