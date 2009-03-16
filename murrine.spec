@@ -1,6 +1,6 @@
 %define name	murrine
-%define version	0.53.1
-%define release %mkrel 5
+%define version	0.90.0
+%define release %mkrel 1
 %define libname %{_lib}%{name}
 
 Name: 	 	%{name}
@@ -24,6 +24,7 @@ to clearlooks-cairo.  Murrine includes animations and a unique style.
 Summary:	Murrine GTK2 cairo theme
 Group:		System/Libraries
 Conflicts:	murrine < 0.53.1-2
+Requires:	%name >= %version
 
 %description -n %{libname}
 The Murrine engine is a cairo-based GTK2 theming tool.  It's very fast compared
@@ -46,7 +47,8 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS CREDITS ChangeLog
+%doc AUTHORS ChangeLog
+%_datadir/gtk-engines/murrine.xml
 
 %files -n %{libname}
 %{_libdir}/gtk-2.0/*/engines/libmurrine.so
