@@ -14,6 +14,7 @@ License:	GPLv2
 Group:		Graphical desktop/GNOME
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gtk2-devel
+BuildRequires:	intltool
 Requires:	%{libname}
 
 %description
