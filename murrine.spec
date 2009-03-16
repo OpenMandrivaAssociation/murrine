@@ -8,7 +8,7 @@ Summary: 	Murrine GTK2 cairo theme
 Version: 	%{version}
 Release: 	%{release}
 
-Source:		http://www.cimitan.com/murrine/files/%{name}-%{version}.tar.bz2
+Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 URL:		http://www.cimitan.com/murrine/
 License:	GPLv2
 Group:		Graphical desktop/GNOME
