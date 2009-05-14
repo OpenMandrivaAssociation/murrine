@@ -1,5 +1,5 @@
 %define name	murrine
-%define version	0.90.2
+%define version	0.90.3
 %define release %mkrel 1
 %define libname %{_lib}%{name}
 
