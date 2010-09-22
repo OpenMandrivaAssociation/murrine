@@ -1,5 +1,5 @@
 %define name	murrine
-%define version	0.90.3
+%define version	0.98.0
 %define release %mkrel 1
 %define libname %{_lib}%{name}
 
@@ -36,7 +36,7 @@ This package contains the Murrine GTK+ engine itself.
 %setup -q
 
 %build
-%configure --enable-animation
+%configure2_5x --enable-animation
 %make
 										
 %install
