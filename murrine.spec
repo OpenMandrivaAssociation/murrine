@@ -1,18 +1,14 @@
-%define name	murrine
-%define version	0.98.2
-%define release 1
 %define libname %{_lib}%{name}
 
-Name: 	 	%{name}
+Name: 	 	murrine
 Summary: 	Murrine GTK2 cairo theme
-Version: 	%{version}
-Release: 	%{release}
+Version: 	0.98.2
+Release: 	1
 
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 URL:		http://www.cimitan.com/murrine/
 License:	GPLv2
 Group:		Graphical desktop/GNOME
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gtk2-devel
 BuildRequires:	intltool
 Requires:	%{libname}
@@ -36,18 +32,16 @@ This package contains the Murrine GTK+ engine itself.
 %setup -q
 
 %build
+export LDFLAGS="-lm"
 %configure2_5x --enable-animation
 %make
 										
 %install
-rm -rf %{buildroot}
 %makeinstall
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog
 %_datadir/gtk-engines/murrine.xml
 
