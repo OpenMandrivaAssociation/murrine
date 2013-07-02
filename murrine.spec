@@ -1,7 +1,7 @@
 Name: 	 	murrine
 Summary: 	GTK2 cairo theme
 Version: 	0.98.2
-Release: 	1
+Release: 	2
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 URL:		http://www.cimitan.com/murrine/
 License:	GPLv2
