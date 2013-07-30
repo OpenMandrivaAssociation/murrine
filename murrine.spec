@@ -1,13 +1,13 @@
-Name: 	 	murrine
-Summary: 	GTK2 cairo theme
-Version: 	0.98.2
-Release: 	2
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
-URL:		http://www.cimitan.com/murrine/
+Summary:	GTK2 cairo theme
+Name:		murrine
+Version:	0.98.2
+Release:	2
 License:	GPLv2
 Group:		Graphical desktop/GNOME
-BuildRequires:	pkgconfig(gtk+-x11-2.0)
+Url:		http://www.cimitan.com/murrine/
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
+BuildRequires:	pkgconfig(gtk+-x11-2.0)
 # Incorrectly named previous package was following library packaging rules,
 # but a plugin is hardly a library
 Obsoletes:	%{_lib}%{name}
