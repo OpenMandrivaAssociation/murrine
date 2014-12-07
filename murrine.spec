@@ -1,7 +1,7 @@
 Summary:	GTK2 cairo theme
 Name:		murrine
 Version:	0.98.2
-Release:	8
+Release:	9
 License:	GPLv2
 Group:		Graphical desktop/GNOME
 Url:		http://www.cimitan.com/murrine/
