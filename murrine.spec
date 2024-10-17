@@ -4,7 +4,7 @@ Version:	0.98.2
 Release:	13
 License:	GPLv2
 Group:		Graphical desktop/GNOME
-Url:		http://www.cimitan.com/murrine/
+Url:		https://www.cimitan.com/murrine/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 Patch0:		https://src.fedoraproject.org/rpms/gtk-murrine-engine/raw/rawhide/f/gtk-murrine-engine_possible-wnck-applet-crash.patch
 BuildRequires:	intltool
