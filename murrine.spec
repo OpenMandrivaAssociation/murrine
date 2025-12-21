@@ -7,6 +7,11 @@ Group:		Graphical desktop/GNOME
 Url:		https://www.cimitan.com/murrine/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 Patch0:		https://src.fedoraproject.org/rpms/gtk-murrine-engine/raw/rawhide/f/gtk-murrine-engine_possible-wnck-applet-crash.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gtk+-x11-2.0)
 # Incorrectly named previous package was following library packaging rules,
